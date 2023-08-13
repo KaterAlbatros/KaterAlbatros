@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+<head>
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+    body {
+      background-color: #181818;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    right: 74px;
+    position: relative;
+    }
+    
+    
+    .row {
+      display: flex;
+      margin-right: 143px;
+    }
+
+    .input-container,
+    .output-container {
+      flex-basis: 50%;
+      padding: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 10px;
+      background-color: #282828;
+      color: #ffffff;
+      border: none;
+      padding: 5px;
+    }
+
+    output {
+      display: inline-block;
+      border: 1px solid #ffffff;
+      padding: 5px;
+      width: 100%;
+      height: 25px;
+      box-sizing: border-box;
+      background-color: #282828;
+      color: #ffffff;
+    }
+
+
+    .image1 {
+    border-radius: 16px;
+    width: 249px;
+    height: 249px;
+    filter: blur(3.3999999999999773px);
+}
+    .image2{
+      border-radius: 16px;
+      width: 250px;
+      height: 250px;
+      filter: blur(3.3999999999999773px);
+    }
+
+    .image3{
+    height: 70px;
+    width: 240px;
+    position: absolute;
+    right: 4px;
+    z-index: 3;
+}
+
+    .image4{
+    height: 64px;
+    width: 240px;
+    position: absolute;
+    right: 4px;
+    z-index: 3;
+}
+
+    h3{
+    display: block;
+    position: relative;
+    font-size: 1.6em;
+    right: -167px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.9s ease, opacity 0.9s ease;
+}
+
+.visible {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.row2{
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+
+}
+
+.arrowdown{
+    position: absolute;
+    height: 160px;
+    width: 30px;
+    top: 54px;
+    transform: translateX(2030%) scale(0.5);
+}
+.arrowdown2{
+    position: absolute;
+    height: 160px;
+    width: 30px;
+    top: 53px;
+    transform: translateX(-70%) scale(0.5);
+}
+.arrowright{
+    width: 30px;
+    position: relative;
+    top: 25px;
+    height: 30px;
+}
+.switch{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 25px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.overflow{
+  overflow: hidden;
+  border-radius: 16px;
+}
+#showRotationButton{
+  color: #00adff;
+  background-color: transparent;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+  margin-bottom: 14px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Sensitivity Changer</h1>
+    <div class="row">
+      <div class="input-container">
+        <label for="convertFrom">Convert from:</label>
+        <select id="convertFrom">
+          <audio id="hoverSound">
+          <source src="https://cdn.discordapp.com/attachments/743746766100234250/1140334046224851024/interface-124464.mp3" type="audio/mpeg">
+          <option value="Krunker">Krunker</option>
+          <option value="AimBeast">Aimbeast</option>
+          <option value="AimLab">AimLab</option>
+          <option value="Borderlands12">Borderlands 1/2</option>
+          <option value="CSGO">CSGO</option>
+          <option value="Daystodie">7 Days To Die</option>
+          <option value="Valorant">Valorant</option>
+          <option value="BananaShooter">Banana Shooter</option>
+          <option value="Overwatch2">Overwatch 2</option>
+          <option value="Kirka">Kirka</option>
+          <option value="CombatMaster">Combat Master</option>
+          <option value="Splitgate">Splitgate</option>
+          <!-- Add more game options as needed -->
+        </select>
+      </div>
+      <a href="#" class="switch-button">
+      <div class="ihuoewr">
+        <img src="https://cdn.discordapp.com/attachments/698953123279929606/1116418222112125078/switch.webp" class="switch">
+      </div>
+    </a>
+      <div class="input-container">
+        <label for="convertTo">Convert to:</label>
+        <select id="convertTo">
+          <option value="Krunker">Krunker</option>
+          <option value="AimBeast">Aimbeast</option>
+          <option value="AimLab">AimLab</option>
+          <option value="Borderlands12">Borderlands 1/2</option>
+          <option value="CSGO">CSGO</option>
+          <option value="Daystodie">7 Days To Die</option>
+          <option value="Valorant">Valorant</option>
+          <option value="BananaShooter">Banana Shooter</option>
+          <option value="Overwatch2">Overwatch 2</option>
+          <option value="Kirka">Kirka</option>
+          <option value="CombatMaster">Combat Master</option>
+          <option value="Splitgate">Splitgate</option>
+          <!-- Add more game options as needed -->
+        </select>
+      </div>
+    </div>
+      <div class="row">
+        <img src="https://cdn.discordapp.com/attachments/698953123279929606/1116414559138353222/arrowtest4.webp" class="arrowdown">
+        <img src="https://cdn.discordapp.com/attachments/698953123279929606/1116415144143093852/arrowtest5.webp" class="arrowdown2">
+    </div>
+    <div class="row">
+      <div class="input-container">
+        <label for="sensitivity">Sensitivity:</label>
+        <input type="number" id="sensitivity" min="0">
+      </div>
+      <div class="ihuoewr">
+        <img src="https://cdn.discordapp.com/attachments/698953123279929606/1116398571055489076/arrow.webp" class="arrowright">
+      </div>
+    </a>
+      <div class="output-container">
+        <label for="convertedSens">Converted Sensitivity:</label>
+        <output id="convertedSens"></output>
+      </div>
+    </div>
+    <button id="showRotationButton">Calculate 360</button>
+
+<h2 id="rotationHeading" style="display: none;">Show mouse rotation</h2>
+<div class="row" id="rotationElements" style="display: none;">
+  <div class="input-container">
+    <label for="mouseDPI">Mouse DPI:</label>
+    <input type="number" id="mouseDPI" min="0">
+  </div>
+  <div class="output-container">
+    <label for="cm360">cm/360°:</label>
+    <output id="cm360"></output>
+  </div>
+  <div class="output-container">
+    <label for="inches360">inches/360°:</label>
+    <output id="inches360"></output>
+  </div>
+</div>
+</div>
+  <script>
+    // Get the button element
+const showRotationButton = document.getElementById('showRotationButton');
+
+// Get the heading and elements to be shown
+const rotationHeading = document.getElementById('rotationHeading');
+const rotationElements = document.getElementById('rotationElements');
+
+// Add click event listener to the button
+showRotationButton.addEventListener('click', () => {
+  // Toggle the visibility of the heading and elements
+  rotationHeading.style.display = rotationHeading.style.display === 'none' ? 'block' : 'none';
+  rotationElements.style.display = rotationElements.style.display === 'none' ? 'flex' : 'none';
+});
+
+    // Get the switch button element
+const switchButton = document.querySelector('.switch');
+
+// Add click event listener to the switch button
+switchButton.addEventListener('click', () => {
+  // Get the select elements for "Convert from" and "Convert to"
+  const convertFromSelect = document.getElementById('convertFrom');
+  const convertToSelect = document.getElementById('convertTo');
+
+  // Get the selected values of "Convert from" and "Convert to"
+  const convertFromValue = convertFromSelect.value;
+  const convertToValue = convertToSelect.value;
+
+  // Swap the selected values
+  convertFromSelect.value = convertToValue;
+  convertToSelect.value = convertFromValue;
+
+  // Trigger the change event on both select elements to recalculate the converted sensitivity
+  convertFromSelect.dispatchEvent(new Event('change'));
+  convertToSelect.dispatchEvent(new Event('change'));
+});
+
+    // Get the input elements
+    const convertFromSelect = document.getElementById('convertFrom');
+    const convertToSelect = document.getElementById('convertTo');
+    const sensitivityInput = document.getElementById('sensitivity');
+    const mouseDPIInput = document.getElementById('mouseDPI');
+
+    // Get the output elements
+    const convertedSensOutput = document.getElementById('convertedSens');
+    const cm360Output = document.getElementById('cm360');
+    const inches360Output = document.getElementById('inches360');
+
+    // Sensitivity conversion factors
+    const conversionFactors = {
+      Krunker: 1 / 2618,
+      CSGO: 1 / 16373,
+      AimLab: 1 / 7200,
+      AimBeast: 1 / 54535,
+      Daystodie: 1 / 720,
+      Borderlands12: 1 / 65000,
+      Valorant: 1 / 5144,
+      BananaShooter: 1 / 360000,
+      Overwatch2: 1 / 54560,
+      Kirka: 1 / 267400,
+      CombatMaster: 1 / 360000,
+      Splitgate: 1 / 38400,
+    };
+
+    // Function to calculate the converted sensitivity and other values
+function calculateConvertedSensitivity() {
+  // Get the selected game conversion factors
+  const convertFromGame = conversionFactors[convertFromSelect.value];
+  const convertToGame = conversionFactors[convertToSelect.value];
+
+  // Get the input values
+  const sensitivity = parseFloat(sensitivityInput.value);
+  const mouseDPI = parseFloat(mouseDPIInput.value);
+
+  // Check if the inputs are valid
+  if (!isNaN(sensitivity) && convertFromGame && convertToGame) {
+    // Calculate the converted sensitivity
+    let convertedSens = (sensitivity * convertFromGame) / convertToGame;
+
+    // Calculate cm/360° and inches/360°
+        let inches360 = 360 / (mouseDPI * convertFromGame * 360 * sensitivity)
+        let cm360 = inches360 * 2.54;
+
+    // Display the results
+    convertedSensOutput.textContent = convertedSens.toFixed(2);
+    cm360Output.textContent = cm360.toFixed(2);
+    inches360Output.textContent = inches360.toFixed(2);
+  } else {
+    // Display NaN when inputs are not valid
+    convertedSensOutput.textContent = 'NaN';
+    cm360Output.textContent = 'NaN';
+    inches360Output.textContent = 'NaN';
+  }
+}
+
+    // Attach event listeners to input elements
+    convertFromSelect.addEventListener('change', calculateConvertedSensitivity);
+    convertToSelect.addEventListener('change', calculateConvertedSensitivity);
+    sensitivityInput.addEventListener('input', calculateConvertedSensitivity);
+    mouseDPIInput.addEventListener('input', calculateConvertedSensitivity);
+
+
+
+
+    // script.js
+const hoverButton = document.getElementById('convertFrom');
+const hoverSound = document.getElementById('hoverSound');
+
+hoverButton.addEventListener('mouseover', () => {
+  hoverSound.play();
+});
+
+hoverButton.addEventListener('mouseout', () => {
+  hoverSound.pause();
+  hoverSound.currentTime = 0;
+});
+
+  </script>
+</body>
+</html>
