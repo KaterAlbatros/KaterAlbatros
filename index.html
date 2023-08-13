@@ -5,6 +5,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
     body {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
       margin: 0;
       overflow: hidden;
       font-family: 'Lato', sans-serif;
@@ -97,6 +102,7 @@
   <div class="grid-background"></div>
   <div class="grid-container">
     <div class="grid-item">
+      <img src="pic/cat.webp" alt="1" height="300px" width="300px" draggable="false" >
       <h1>Yo, my name is KaterAlbatros, also known as Kater, and I play games.</h1>
     </div>
     <div class="grid-item">
@@ -112,7 +118,7 @@
       <h3>
         made when I was bored
       </h3>
-      <a class="button" href="bored/MouseSens.html" style="--color:#ff00dd79;">Game Mouse sens Changer</a>
+      <a class="button" href="bored/MouseSens.html" draggable="false" style="--color:#ff00dd79;">Game Mouse sens Changer</a>
     </div>
   </div>
   <script>
