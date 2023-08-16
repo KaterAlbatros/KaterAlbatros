@@ -1,73 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Welcum</title>
+<link rel="icon" href="pic/icon.png" type="image/x-icon">
+
+
+</head>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+      .wip{
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    right: 8px;
+    top: 870px;
+}
 
+        .header {
+          background-color: #8f5c5c00;
+          color: rgb(133 45 45 / 0%);
+          text-align: center;
+          width: 110%;
+          position: absolute;
+          top: 22px;
+          left: -431px;
+      }
+
+        .header-button {
+          text-decoration-line: none;
+          border-radius: 12px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 -1px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff00ea71;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+}
+
+        .header-button:hover {
+            background-color: #ff00ea;
+        }
     body {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-      margin: 0;
       overflow: hidden;
       font-family: 'Lato', sans-serif;
-    }
-    .embed {
-      background-color: #36393f;
-      color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      width: 300px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    .username {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .discriminator {
-      font-size: 14px;
-      color: #99aab5;
-    }
-    .button {
-      display: block;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: var(--color, #3498db);
-      color: white;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      margin: 10px;
-      border-radius: 5px;
-    }
-    .grid-right{
-      margin-right: 210px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      height: 100vh;
+ 
     }
 
     .grid-background {
@@ -81,44 +65,205 @@
       filter: blur(5.4px);
     }
 
-    .grid-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      color: white;
-      text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+    .Steam{
+    height: 100px;
+    display: block;
+    text-decoration-line: none;
     }
-    .twitter-timeline{
-      position: absolute;
-      right: 470px;
-      top:20px;
-      overflow: auto;
+
+    #socials {
+      width: 300px;
+    right: -656px;
+    height: 100px;
+    background-color: rgb(168 154 173 / 45%);
+    position: relative;
+}
+    .steamname{
+        font-family: 'Lato', sans-serif;
+        position: relative;
+        right: -120px;
+        font-size: 22px;
+        color: white;
+        top: 20px;
     }
+
+    .kovaakstext{
+    position: absolute;
+    font-size: 20px;
+    right: 8px;
+    top: 46px;
+    color: white;
+
+    }
+
+    .kovaaksheart{
+    font-size: 20px;
+    position: absolute;
+    right: 8px;
+    color: white;
+    top: 56px;
+
+    }
+
+    .kovaaksicon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 33px;
+    top: 70px;
+}
+    .steamlvltitle{
+    font-size: 12px;
+    position: absolute;
+    right: 67px;
+    top: 57px;
+    color: white;
+}
+
+    .steamlvltitle2{
+    font-size: 12px;
+    position: absolute;
+    right: 69px;
+    top: 70px;
+    color: white;
+}
+
+    .steamlvl{
+    font-size: 18px;
+    position: absolute;
+    right: 105px;
+    top: 55px;
+    color: white;
+}
+    .steamlvlcircle{
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 16px;
+    border: solid #4e8ddb 2px;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 100px;
+    top: 53px;
+}
+
+    .steamachivicon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 169px;
+    bottom: 0;
+}
+
+    .steamachivtextname {
+    font-size: 12px;
+    position: absolute;
+    right: 135px;
+    color: #fffffffa;
+    bottom: 5px;
+    display: block;
+} 
+    .steamachivtextxp {
+    font-size: 11px;
+    position: absolute;
+    right: 132px;
+    color: #ffffffab;
+    bottom: -8px;
+}
+    .steampfpframe {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        top: -11px;
+        left: -11px;
+    }
+    .bio{
+      width: 627px;
+    position: relative;
+    top: 243px;
+    height: auto;
+    text-align: center;
+
+    }
+
+    .steampfp{
+        position: absolute;
+        top: 0px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .steamicon {
+        width: 30px;
+        height: 30px;
+        filter: hue-rotate(120deg);
+        position: absolute;
+        top: 0;
+        left: 270px;
+}
+.video-background {
+  position: fixed;
+    top: 430px;
+    left: 753px;
+    width: 210px;
+    height: 100px;
+    z-index: -1;
+    overflow: hidden;
+    filter: blur(2px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}  
+video{
+        width: 100%;
+  height: auto;
+}
   </style>
-</head>
 <body>
+  <p class="wip">site work in progress</p>
+  <div class="header">
+    <div class="header-buttons">
+        <a href="bored/MouseSens" class="header-button">MouseSens</a>
+        <a class="header-button">Anime Cool</a>
+        <a class="header-button">idk</a>
+        <a class="header-button">your mom</a>
+        <a class="header-button">lol</a>
+    </div>
+</div>
+
   <div class="grid-background"></div>
-  <div class="grid-container">
-    <div class="grid-item">
-      <img src="pic/cat.webp" alt="1" height="300px" width="300px" draggable="false" >
+    <div class="bio">
+      <img src="pic/cat.webp" alt="1" height="300px" width="300px" draggable="false"  >
       <h1>Yo, my name is KaterAlbatros, also known as Kater, and I play games.</h1>
     </div>
-    <div class="grid-item">
-      <h2>Socials:</h2>
-      <iframe title="Steam user embed"
-      src="https://gamer2810.github.io/steam-miniprofile/?accountId=413543220" style="border:0px #ffffff none; border-radius: 12px;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="200px" width="330px" allowfullscreen></iframe>
-    <iframe title="Discord user embed" width="340" height=120 frameborder="0"  src="https://widgets.vendicated.dev/user?id=404981068433719306&theme=dark&banner=true&full-banner=false&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=false&background-color=%23808080"></iframe>
-        <iframe title="Spotify playlist embed" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/67Yr5gGX2AO6okfdqCiajp?utm_source=generator&theme=0" width="58%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <div style="left: 0; width: 58%; height: 0;  position: relative; padding-bottom: 56.25%;"><iframe src="https://player.twitch.tv/?channel=kateralbatros&autoplay=false&parent=iframe.ly&parent=cdn.iframe.ly&parent=iframely.net&parent=iframely.com&parent=if-cdn.com" style="top: 0; left: 0; width: 100%; height: 50%; ; border-radius: 12px; position: absolute; border: 0;" allowfullscreen scrolling="no" scrolling="yes" allow="encrypted-media;"></iframe></div>
-          </div>
 
-    <div class="grid-right">
-      <h3>
-        made when I was bored
-      </h3>
-      <a class="button" href="bored/MouseSens" draggable="false" style="--color:#ff00dd79;">Game Mouse sens Changer</a>
+
+      <div id="socials">
+        <a class="Steam" href="https://steamcommunity.com/id/KaterAlbatros/"> 
+        <p class="steamname">KaterAlbatros</p>
+        <img class="steamachivicon" src="witch.png">
+        <p class="steamachivtextxp">500 XP</p>
+        <p class="steamachivtextname">Witch</p>
+
+        <p class="steamlvlcircle"></p>
+        <p class="steamlvl">55</p>
+        <p class="steamlvltitle">Steam</p>
+        <p class="steamlvltitle2">Level</p>
+
+        <p class="kovaakstext">^^</p>
+        <p class="kovaaksheart">&#10084;</p>
+        <img class="kovaaksicon" src="kovaaksicon.webp">
+        <img class="steamicon" src="steamicon.png">
+        <img class="steampfp" src="SteamPfp.png">
+        <img class="steampfpframe" src="Steampfpframe.png">
+        <div class="video-background">
+        <video autoplay muted loop>
+        <source class="steamminibg" src="steambg.webm" type="video/webm">
+        </video></div></a>
+        <div></div>
     </div>    
   </div>
   <script>
