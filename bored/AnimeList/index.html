@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anime List</title>
+</head>
+<body>
+    <p>My List/Ratings of Anime I saw</p>
+    <p>10 = Super dooper cool</p>
+    <p>5 = mid</p>
+    <p>1 = naa</p>
+    <p>work in progress</p>
+    <div class="container">
+
+        </div>
+    </div>
+
+    </div>
+
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+    body{
+        background-color: rgba(99, 90, 90, 0.404);
+    }
+    .anime-card {
+            width: 300px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 3%;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: 2px solid;
+            border-color: var(--border-color);
+        }
+        .anime-hover-content{
+            font-family: 'Lato', sans-serif;
+            margin-top: 206px;
+            border-radius: 4%;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.349);
+            background-size: cover;
+            opacity: 0;
+            -webkit-text-stroke-width: 0.1px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+        }
+        .anime-container, #animeContainer{
+            border: none !important;
+        }
+
+        .anime-card:hover .anime-hover-content {
+            opacity: 1;
+        }
+        .anime-card:hover {
+            transform-origin: bottom center;
+            transform: perspective(1000px) rotateX(calc(-var(--mouse-y, 0) * 0.5deg)) rotateY(calc(var(--mouse-x, 0) * 0.5deg));
+        }
+
+    
+    .anime-card-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    .anime-name {
+        align-self: flex-start;
+    }
+    
+    .anime-card-rating {
+        font-family: 'Lato', sans-serif;
+        align-self: flex-end;
+        width: 30px;
+        font-size: 25px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+        height: 30px;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        display: flex;
+        margin-top: 21px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .anime-card-genres {
+        display: none;
+    }
+    
+
+    .anime-card-rating[data-rating="1"] { border-color: #FF0000; }
+    .anime-card-rating[data-rating="2"] { border-color: #FF4500; }
+    .anime-card-rating[data-rating="3"] { border-color: #FFA500; }
+    .anime-card-rating[data-rating="4"] { border-color: #FFD700; }
+    .anime-card-rating[data-rating="5"] { border-color: #FFFF00; }
+    .anime-card-rating[data-rating="6"] { border-color: #2E8B57; }
+    .anime-card-rating[data-rating="7"] { border-color: #3CB371; }
+    .anime-card-rating[data-rating="8"] { border-color: #00CC00; }
+    .anime-card-rating[data-rating="9"] { border-color: #00FF00; }
+    .anime-card-rating[data-rating="10"] { border-color: #00FF80; }
+    </style>
+
+<script>
+    const animeListDB = {
+        animelistdb: [
+            {
+                "id": 1,
+                "name": "Summer Time Rendering",
+                "coverbg": "covers/summertimerendering.webp",
+                "rating": "9",
+                "release": "25.7.2020",
+                "genres": "Mystery, Supernatural, Suspense",
+                "myanimelist": "https://myanimelist.net/manga/110031/Summertime_Render",
+                "bordercolor": "#3478d7",
+                "episodes": "25",
+                "seasons": "1",
+                "lasttimeupdated": "25.08.2023",
+            },
+            {
+                "id": 2,
+                "name": "Re:Zero",
+                "coverbg": "covers/rezero.webp",
+                "rating": "9",
+                "release": "4.4.2016",
+                "genres": "Drama, Fantasy, Suspense",
+                "myanimelist": "https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu",
+                "bordercolor": "#f2312b",
+                "episodes": "51",
+                "seasons": "2",
+                "lasttimeupdated": "25.08.2023",
+            },
+            {
+                "id": 3,
+                "name": "Demon Slayer",
+                "coverbg": "covers/demonslayer.webp",
+                "rating": "8",
+                "release": "6.4.2019",
+                "genres": "Action, Award Winning, Fantasy",
+                "myanimelist": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
+                "bordercolor": "#101012",
+                "episodes": "55",
+                "seasons": "3",
+                "lasttimeupdated": "25.08.2023",
+            },
+            {
+                "id": 4,
+                "name": "Attack on Titan",
+                "coverbg": "covers/attackontitan.webp",
+                "rating": "8",
+                "release": "7.4.2013",
+                "genres": "Action, Award Winning, Drama, Suspense",
+                "myanimelist": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
+                "bordercolor": "#c25721",
+                "episodes": "89",
+                "seasons": "4",
+                "lasttimeupdated": "25.08.2023",
+            },
+        ]
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const animeContainer = document.querySelector(".container");
+
+        const sortedAnimeList = animeListDB.animelistdb.sort((a, b) => {
+            return parseInt(b.rating) - parseInt(a.rating);
+        });
+
+        sortedAnimeList.forEach((anime) => {
+            const animeCard = document.createElement("div");
+            animeCard.classList.add("anime-card");
+
+            animeCard.style.backgroundImage = `url(${anime.coverbg})`;
+            animeCard.style.setProperty('--border-color', anime.bordercolor);
+
+            const ratingClass = `rating-${anime.rating}`;
+            animeCard.innerHTML = `
+                <div class="anime-card-info">
+                    <div class="anime-card-rating ${ratingClass}" data-rating="${anime.rating}">${anime.rating}</div>
+                </div>
+                <div class="anime-hover-content">
+                    <p>Name: <span class="hover-name">${anime.name}</span></p>
+                    <p>Genres: <span class="hover-genres">${anime.genres}</span></p>
+                    <p>Episodes: <span class="hover-episodes">${anime.episodes}</span></p>
+                    <p>Seasons: <span class="hover-seasons">${anime.seasons}</span></p>
+                    <p>Release: <span class="hover-release">${anime.release}</span></p>
+                    <p>Last Time Updated: <span class="hover-lasttimeupdated">${anime.lasttimeupdated}</span></p>
+                </div>
+            `;
+
+            const hoverContent = animeCard.querySelector(".anime-hover-content");
+            hoverContent.style.opacity = 0;
+
+            animeCard.addEventListener("mouseenter", () => {
+                hoverContent.style.opacity = 1;
+            });
+
+            animeCard.addEventListener("mouseleave", () => {
+                hoverContent.style.opacity = 0;
+            });
+
+            animeCard.addEventListener("click", () => {
+                window.open(anime.myanimelist, "_blank");
+            });
+
+            animeContainer.appendChild(animeCard);
+        });
+    });
+</script>

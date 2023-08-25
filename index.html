@@ -21,9 +21,10 @@
           color: rgb(133 45 45 / 0%);
           text-align: center;
           width: 110%;
+          display: flex;
           position: absolute;
           top: 22px;
-          left: -431px;
+          left: 650px;
       }
 
         .header-button {
@@ -34,7 +35,7 @@
             margin: 0 -1px;
             font-size: 16px;
             color: white;
-            background-color: #ff00ea71;
+            background-color: #ff00ea00;
             border: none;
             cursor: pointer;
             transition: background-color 0.5s;
@@ -49,21 +50,24 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-      overflow: hidden;
       font-family: 'Lato', sans-serif;
+      overflow: hidden;
+      
  
     }
 
-    .grid-background {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-image: url("pic/AnimeBG.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      filter: blur(5.4px);
-    }
+    .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    background-color: pink;
+    color: var(--text-color);
+    accent-color: var(--accent-color);
+    transition: all .25s var(--bezier-curve);
+}
 
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
@@ -179,10 +183,21 @@
         top: -11px;
         left: -11px;
     }
+    .games {
+      top: 80px;
+    position: relative;
+    }
+    .setup {
+    position: relative;
+    left: 910px;
+    top: -230px;
+
+    }
+
     .bio{
       width: 627px;
     position: relative;
-    top: 243px;
+    top: 25px;
     height: auto;
     text-align: center;
 
@@ -204,12 +219,12 @@
         left: 270px;
 }
 .video-background {
-  position: fixed;
-    top: 430px;
-    left: 753px;
+    top: 0px;
+    left: 90px;
     width: 210px;
     height: 100px;
     z-index: -1;
+    position: absolute;
     overflow: hidden;
     filter: blur(2px);
     background: rgba(255, 255, 255, 0.2);
@@ -223,24 +238,37 @@ video{
 }
   </style>
 <body>
+
   <p class="wip">site work in progress</p>
   <div class="header">
     <div class="header-buttons">
         <a href="bored/MouseSens" class="header-button">MouseSens</a>
-        <a class="header-button">Anime Cool</a>
-        <a class="header-button">idk</a>
+        <a href="bored/Animelist" class="header-button">Animelist</a>
+        <a class="header-button">Krunker</a>
         <a class="header-button">your mom</a>
         <a class="header-button">lol</a>
     </div>
 </div>
 
-  <div class="grid-background"></div>
+  <div class="background"></div>
+
     <div class="bio">
       <img src="pic/cat.webp" alt="1" height="300px" width="300px" draggable="false"  >
-      <h1>Yo, my name is KaterAlbatros, also known as Kater, and I play games.</h1>
+      <h1>Yo, my name is KaterAlbatros, also known as Kater, and I play games. also like to watch anime and...</h1>
     </div>
-
-
+    <div class="setup">
+      <p>My Current Setup</p>
+      <p>1. mouse</p>
+      <p>2. headset</p>
+      <p>3. keyboard</p>
+      <p>4. mousepad</p>
+      <p>5. monitor</p>
+    </div>
+    <div class="games">
+        <p>Games</p>
+        <p>I played alot of Krunker in the past years</p>
+      </div>
+      
       <div id="socials">
         <a class="Steam" href="https://steamcommunity.com/id/KaterAlbatros/"> 
         <p class="steamname">KaterAlbatros</p>
