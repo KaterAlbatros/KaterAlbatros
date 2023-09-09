@@ -13,7 +13,7 @@
     position: absolute;
     color: white;
     right: 8px;
-    top: 870px;
+    bottom: 0;
 }
 
         .header {
@@ -29,7 +29,6 @@
 
         .header-button {
           text-decoration-line: none;
-          border-radius: 12px;
             display: inline-block;
             padding: 10px 20px;
             margin: 0 -1px;
@@ -42,7 +41,7 @@
 }
 
         .header-button:hover {
-            background-color: #ff00ea;
+          border-bottom:solid rgb(255, 255, 255) 5px;
         }
     body {
     -webkit-user-drag: none;
@@ -79,7 +78,7 @@
 
     #socials {
       width: 300px;
-    right: -656px;
+      right: -400px;
     height: 100px;
     background-color: rgb(168 154 173 / 45%);
     position: relative;
@@ -184,25 +183,100 @@
         left: -11px;
     }
     .games {
-      top: 80px;
+    right: -401px;
+    top: -60px;
     position: relative;
-    }
-    .setup {
-    position: relative;
-    left: 910px;
-    top: -230px;
+}
+ 
 
-    }
-
-    .bio{
-      width: 627px;
+    .bio {
+    width: 627px;
     position: relative;
     top: 25px;
+    right: -230px;
     height: auto;
     text-align: center;
+  }
+    .setup {
+      display: flex;
+    align-items: flex-start;
+    position: relative;
+    right: -907px;
+    top: 95px;
+}
 
-    }
+  .big-img-container {
+    width: 210px;
+    margin-right: 8px;
+    height: 210px;
+    overflow: hidden;
+}
 
+  .big-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+  }
+
+  .small-img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+  }
+
+  .small-img-container a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .small-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+  }
+
+  .small-img:hover {
+    opacity: 0.7;
+  }
+
+  .small-img-container a:hover + .big-img-container .big-img {
+    transform: scale(1.2);
+  }
+  .small-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  .small-img-caption {
+    position: absolute;
+    bottom: -26px;
+    left: 115px;
+    right: 0;
+    width: 231px;
+    height: auto;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+  .small-img-container a:hover .small-img-caption {
+    opacity: 1;
+  }
+
+  .small-img:hover {
+    opacity: 0.7;
+  }
+
+  .small-img-container a:hover + .big-img-container .big-img {
+    transform: scale(1.2);
+  }
     .steampfp{
         position: absolute;
         top: 0px;
@@ -236,8 +310,23 @@ video{
         width: 100%;
   height: auto;
 }
+
+h6{
+  top: -112px;
+    position: relative;
+    right: -129px;
+    font-size: 30px;
+}
+.favanime{
+  position: relative;
+  top: 250px;
+    right: -1074px;
+}
   </style>
 <body>
+  <div class="favanime">
+    <p>My fav animes holder</p>
+  </div>
 
   <p class="wip">site work in progress</p>
   <div class="header">
@@ -257,12 +346,37 @@ video{
       <h1>Yo, my name is KaterAlbatros, also known as Kater, and I play games. also like to watch anime and...</h1>
     </div>
     <div class="setup">
-      <p>My Current Setup</p>
-      <p>1. mouse</p>
-      <p>2. headset</p>
-      <p>3. keyboard</p>
-      <p>4. mousepad</p>
-      <p>5. monitor</p>
+      <h6>My Setup</h6>
+      <div class="big-img-container">
+          <img class="big-img" src="pic/pfpD.webp" alt="Big Image">
+        </a>
+      </div>
+      <div class="small-img-container">
+        <a href="https://www.logitechg.com/de-de/products/gaming-mice/pro-x-superlight-wireless-mouse.910-005880.html">
+          <img class="small-img" src="pic/setup/gpro.webp" alt="Small Image 1">
+          <div class="small-img-caption">Logitech G Pro Mouse</div>
+        </a>
+        <a href="https://yuki.gg/products/copy-of-yuki-aim-2022-drop-1-large-oni-yuki-pad-limited-black-pre-order">
+          <img class="small-img" src="pic/setup/mousepad.webp" alt="Small Image 2">
+          <div class="small-img-caption">Yuki Mousepad</div>
+        </a>
+        <a href="https://de.steelseries.com/gaming-headsets/arctis-pro-wireless">
+          <img class="small-img" src="pic/setup/headset.webp" alt="Small Image 3">
+          <div class="small-img-caption">SteelSeries Arctis Pro Headset</div>
+        </a>
+        <a href="https://de.banggood.com/AKKO-3061S-Tokyo-R2-Mechanical-Keyboard-61-Keys-Wired-Gateron-Prelubricate-Switch-RGB-PBT-Japanese-Keycap-Gaming-Keyboard-p-1839149.html">
+          <img class="small-img" src="pic/setup/keyboard.webp" alt="Small Image 4">
+          <div class="small-img-caption">AKKO Tokyo R2 Keyboard</div>
+        </a>
+        <a href="https://www.thomann.de/de/shure_sm_7b_studiomikro.htm">
+          <img class="small-img" src="pic/setup/mic.webp" alt="Small Image 4">
+          <div class="small-img-caption">Shure SM 7 B</div>
+        </a>
+        <a href="https:thomann.de/de/focusrite_scarlett_solo_3rd_gen.htm">
+          <img class="small-img" src="pic/setup/audiointerface.webp" alt="Small Image 4">
+          <div class="small-img-caption">Focusrite Scarlett Solo 3rd Gen</div>
+        </a>
+      </div>
     </div>
     <div class="games">
         <p>Games</p>
@@ -295,7 +409,16 @@ video{
     </div>    
   </div>
   <script>
+const bigImg = document.querySelector('.big-img');
+const smallImgs = document.querySelectorAll('.setup a img:not(.big-img)');
 
+smallImgs.forEach(smallImg => {
+  smallImg.addEventListener('mouseover', () => {
+    const newSrc = smallImg.src;
+    bigImg.src = newSrc;
+  });
+});
   </script>
 </body>
 </html>
+
