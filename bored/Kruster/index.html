@@ -6,15 +6,194 @@
     <title>Kruster</title>
 </head>
 <body>
-    <div class="css">
-    <div class="settings">
-    <div class="cross">
+    <div class="card-grid" id="cardGrid">
+        <!-- Cards will be added here using JavaScript -->
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-image">
+                <img src="" alt="Profile Picture" id="popupImage">
+            </div>
+            <div class="popup-buttons">
+                <!-- Add buttons here -->
+                <button id="closePopup">Close</button>
+                <button id="button1">Button 1</button>
+                <button id="button2">Button 2</button>
+            </div>
+        </div>
+    </div>
+    
+
+
 </body>
 </html>
 
 
 <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-info {
+    flex-grow: 1;
+}
+
+.card h2,
+.card p {
+    margin: 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.popup-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.popup-buttons button {
+    margin-bottom: 10px;
+}
+
 </style>
 
 <script>
+const data = [
+    {
+        name: "KaterAlbatros",
+        pfp: "https://cdn.discordapp.com/attachments/698953123279929606/1150189197165072444/default-avatar-icon-of-social-media-user-vector.jpg",
+        dpi: "dpi 600",
+        picture: "https://cdn.discordapp.com/attachments/698953123279929606/1150193192487100516/image.png",
+    },
+    {
+        name: "Jane Smith",
+        pfp: "profile2.jpg",
+        dpi: "Developer",
+        picture: "image2.jpg",
+    },
+    // Add more data as needed
+];
+
+const cardGrid = document.getElementById("cardGrid");
+const popup = document.getElementById("popup");
+const popupImage = document.getElementById("popupImage");
+const closePopup = document.getElementById("closePopup");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
+
+let isPopupExpanded = false;
+
+// Create cards from the data
+data.forEach((item) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const profileImage = document.createElement("img");
+    profileImage.src = item.pfp;
+    profileImage.alt = item.name + "'s Profile Picture";
+
+    const cardInfo = document.createElement("div");
+    cardInfo.classList.add("card-info");
+
+    const name = document.createElement("h2");
+    name.textContent = item.name;
+
+    const dpi = document.createElement("p");
+    dpi.textContent = item.dpi;
+
+    cardInfo.appendChild(name);
+    cardInfo.appendChild(dpi);
+
+    card.appendChild(profileImage);
+    card.appendChild(cardInfo);
+
+    card.addEventListener("click", () => {
+        if (!isPopupExpanded) {
+            popupImage.style.maxWidth = "100%";
+            popupImage.style.maxHeight = "100%";
+            popupImage.style.cursor = "zoom-out";
+            isPopupExpanded = true;
+        } else {
+            popupImage.style.maxWidth = "auto";
+            popupImage.style.maxHeight = "auto";
+            popupImage.style.cursor = "zoom-in";
+            isPopupExpanded = false;
+        }
+
+        popupImage.src = item.picture;
+        popup.style.display = "flex";
+    });
+
+    cardGrid.appendChild(card);
+});
+
+closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+
+button1.addEventListener("click", () => {
+    // Add functionality for button 1 here
+});
+
+button2.addEventListener("click", () => {
+    // Add functionality for button 2 here
+});
+
+
 </script>

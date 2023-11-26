@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+ <title>Random Picture</title>
+</head>
+<body>
+    <img id="randomImage" alt="Random Image">
+
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var imageUrls = [
+        'cat1.jpg',
+        'cat2.jpg',
+        'cat3.jpg',
+        'cat4.jpg',
+        'cat5.webp',
+        
+    ];
+    var randomIndex = Math.floor(Math.random() * imageUrls.length);
+    var randomImage = document.getElementById('randomImage');
+    randomImage.src = imageUrls[randomIndex];
+});
+
+</script>
