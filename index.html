@@ -23,8 +23,8 @@
           width: 110%;
           display: flex;
           position: absolute;
-          top: 22px;
-          left: 650px;
+          top: 0;
+          left: 35%;
       }
 
         .header-button {
@@ -32,10 +32,11 @@
             display: inline-block;
             padding: 10px 20px;
             margin: 0 -1px;
-            font-size: 16px;
+            font-size: 20px;
             color: white;
-            background-color: #ff00ea00;
+            background-color: #ff00ea2c;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.5s;
 }
@@ -79,9 +80,11 @@
     #socials {
       width: 300px;
       right: -400px;
-    height: 100px;
-    background-color: rgb(168 154 173 / 45%);
-    position: relative;
+      height: 100px;
+      background-color: rgb(168 154 173 / 45%);
+      position: absolute;
+      bottom: 10%;
+      left: 20%;
 }
     .steamname{
         font-family: 'Lato', sans-serif;
@@ -182,27 +185,24 @@
         top: -11px;
         left: -11px;
     }
-    .games {
-    right: -401px;
-    top: -60px;
-    position: relative;
-}
  
 
     .bio {
     width: 627px;
-    position: relative;
-    top: 25px;
-    right: -230px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
     height: auto;
     text-align: center;
+    margin-top: 5%;
   }
     .setup {
       display: flex;
     align-items: flex-start;
-    position: relative;
-    right: -907px;
-    top: 95px;
+    position: absolute;
+  right: 4%;
+  top: 40%;
+
 }
 
   .big-img-container {
@@ -215,6 +215,7 @@
   .big-img {
     width: 100%;
     height: 100%;
+    background-color: white;
     transition: transform 0.3s ease;
     border-radius: 12px;
   }
@@ -235,7 +236,7 @@
   .small-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-color: white;
     transition: opacity 0.3s ease;
     border-radius: 12px;
   }
@@ -246,12 +247,6 @@
 
   .small-img-container a:hover + .big-img-container .big-img {
     transform: scale(1.2);
-  }
-  .small-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
   }
 
   .small-img-caption {
@@ -324,15 +319,12 @@ h6{
 }
   </style>
 <body>
-  <div class="favanime">
-    <p>My fav animes holder</p>
-  </div>
 
   <p class="wip">site work in progress</p>
   <div class="header">
     <div class="header-buttons">
         <a href="bored/MouseSens" class="header-button">MouseSens</a>
-        <a href="bored/AnimeList" class="header-button">Animelist</a>
+        <a href="https://myanimelist.net/animelist/KaterAlbatros" target="_blank" class="header-button">Animelist</a>
         <a class="header-button">Krunker</a>
         <a class="header-button">your mom</a>
         <a class="header-button">lol</a>
@@ -343,7 +335,7 @@ h6{
 
     <div class="bio">
       <img src="pic/cat.webp" alt="1" height="300px" width="300px" draggable="false"  >
-      <h1>Yo, my name is KaterAlbatros, also known as Kater, and I play games. also like to watch anime and...</h1>
+      <h1> :/</h1>
     </div>
     <div class="setup">
       <h6>My Setup</h6>
@@ -356,17 +348,17 @@ h6{
           <img class="small-img" src="pic/setup/gpro.webp" alt="Small Image 1">
           <div class="small-img-caption">Logitech G Pro Mouse</div>
         </a>
-        <a href="https://yuki.gg/products/copy-of-yuki-aim-2022-drop-1-large-oni-yuki-pad-limited-black-pre-order">
-          <img class="small-img" src="pic/setup/mousepad.webp" alt="Small Image 2">
-          <div class="small-img-caption">Yuki Mousepad</div>
+        <a href="https://wallhack.com/collections/glass-mousepads">
+          <img class="small-img" src="pic/setup/mousepad.jpg" alt="Small Image 2">
+          <div class="small-img-caption">Skypad</div>
         </a>
-        <a href="https://de.steelseries.com/gaming-headsets/arctis-pro-wireless">
+        <a href="https://www.beyerdynamic.de/dt-900-pro-x.html?nosto=frontpage_studio-low">
           <img class="small-img" src="pic/setup/headset.webp" alt="Small Image 3">
-          <div class="small-img-caption">SteelSeries Arctis Pro Headset</div>
+          <div class="small-img-caption">DT 900 PRO X</div>
         </a>
-        <a href="https://de.banggood.com/AKKO-3061S-Tokyo-R2-Mechanical-Keyboard-61-Keys-Wired-Gateron-Prelubricate-Switch-RGB-PBT-Japanese-Keycap-Gaming-Keyboard-p-1839149.html">
-          <img class="small-img" src="pic/setup/keyboard.webp" alt="Small Image 4">
-          <div class="small-img-caption">AKKO Tokyo R2 Keyboard</div>
+        <a href="https://wooting.io/wooting-60he">
+          <img class="small-img" src="pic/setup/keyboard.png" alt="Small Image 4">
+          <div class="small-img-caption">Wooting 60</div>
         </a>
         <a href="https://www.thomann.de/de/shure_sm_7b_studiomikro.htm">
           <img class="small-img" src="pic/setup/mic.webp" alt="Small Image 4">
@@ -378,11 +370,6 @@ h6{
         </a>
       </div>
     </div>
-    <div class="games">
-        <p>Games</p>
-        <p>I played alot of Krunker in the past years</p>
-      </div>
-      
       <div id="socials">
         <a class="Steam" href="https://steamcommunity.com/id/KaterAlbatros/"> 
         <p class="steamname">KaterAlbatros</p>
